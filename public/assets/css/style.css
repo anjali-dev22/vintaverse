@@ -5700,6 +5700,7 @@ footer.clean-footer.crev .circle-blur {
   position: absolute;
   bottom: 0;
   width: 100%;
+  z-index: 9;
 }
 
 .work-fade .marq-head .main-marq:after {

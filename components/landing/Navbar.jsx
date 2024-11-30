@@ -25,7 +25,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#0" data-scroll-nav="2">
-                <span className="rolling-text">Pages</span>
+                <span className="rolling-text">Services</span>
               </a>
             </li>
             <li className="nav-item">

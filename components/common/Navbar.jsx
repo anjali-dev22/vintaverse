@@ -42,8 +42,8 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bord blur">
       <div className="container o-hidden">
-        <a className="logo icon-img-100" href="#">
-          <img src="/assets/imgs/logo-light.png" alt="logo" />
+        <a className="logo icon-img-150" href="#">
+          <img src="/assets/imgs/logo-light.svg" alt="logo" />
         </a>
 
         <button
@@ -150,7 +150,7 @@ function Navbar() {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                <span className="rolling-text">Pages</span>
+                <span className="rolling-text">Services</span>
               </a>
               <ul className="dropdown-menu">
                 <li>
@@ -277,7 +277,7 @@ function Navbar() {
             href="/page-contact"
             className="butn butn-sm butn-bg main-colorbg radius-5"
           >
-            <span className="text">Let&apos;s contact</span>
+            <span className="text">Book Free Demo</span>
           </a>
         </div>
       </div>

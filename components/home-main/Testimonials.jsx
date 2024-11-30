@@ -28,7 +28,7 @@ function Testimonials() {
                 <img src="/assets/imgs/testim/bg.jpg" alt="" />
               </div>
               <div className="fix-img">
-                <img src="/assets/imgs/arw1.png" alt="" />
+                <img src="/assets/imgs/arw1.svg" alt="icon" />
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ function Intro() {
             <div className="row lg-marg align-items-center">
               <div className="col-md-6">
                 <div className="img1 sm-mb50">
-                  <img src="/assets/imgs/arw2.png" alt="" />
+                  <img src="/assets/imgs/weBelive.png" alt="" />
                 </div>
               </div>
               <div className="col-md-6">

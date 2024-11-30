@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import data from '@/data/portfolios/works1';
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import arrowIcon from '@/public/assets/imgs/upArrow.svg';
 function Portfolio() {
   const marquess = ['Our Portfolio']; // Replace with your actual array
   const AllMarquess = Array(10).fill(marquess).flat();
@@ -48,15 +50,23 @@ function Portfolio() {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-2 d-flex align-items-end">
+          <div className="col-lg-3 d-flex align-items-end">
             <div className="text pb-100">
-              <p>
-                We help our client suceed by creating identities, digital
+
+              <ul>
+                <li className='d-flex align-items-center gap-3'><Image src={arrowIcon} alt='up-arrow' className='up-arrow' /> <p>Mails Manage</p></li>
+                <li className='d-flex align-items-center gap-3'><Image src={arrowIcon} alt='up-arrow' className='up-arrow' /> <p>Grocey App</p></li>
+                <li className='d-flex align-items-center gap-3 text-nowrap'><Image src={arrowIcon} alt='up-arrow' className='up-arrow' /> <p>Pick and Delivery app</p></li>
+                <li className='d-flex align-items-center gap-3'><Image src={arrowIcon} alt='up-arrow' className='up-arrow' /> <p>Dating App</p></li>
+                <li className='d-flex align-items-center gap-3'><Image src={arrowIcon} alt='up-arrow' className='up-arrow' /> <p>Fintech App</p></li>
+              </ul>
+              {/* <p>
+                We help our clients suceed by creating identities, digital
                 experiences, and printmaterials that communicate clearly
-              </p>
+              </p> */}
             </div>
           </div>
-          <div className="col-lg-9">
+          <div className="col-lg-8">
             <div className="work-swiper">
               <Swiper {...swiperOptions} className="swiper-container">
                 {data.map((item, i) => (
