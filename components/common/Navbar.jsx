@@ -1,27 +1,28 @@
 'use client';
-import React, { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import React from 'react';
 
 function Navbar() {
-  function handleScroll() {
-    const bodyScroll = window.scrollY;
-    const navbar = document.querySelector('.navbar');
+  // function handleScroll() {
+  //   const bodyScroll = window.scrollY;
+  //   const navbar = document.querySelector('.navbar');
 
-    if (bodyScroll > 300) navbar.classList.add('nav-scroll');
-    else navbar.classList.remove('nav-scroll');
-  }
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  function handleDropdownMouseMove(event) {
-    event.currentTarget.querySelector('.dropdown-menu').classList.add('show');
-  }
+  //   if (bodyScroll > 300) navbar.classList.add('nav-scroll');
+  //   else navbar.classList.remove('nav-scroll');
+  // }
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
+  // function handleDropdownMouseMove(event) {
+  //   event.currentTarget.querySelector('.dropdown-menu').classList.add('show');
+  // }
 
-  function handleDropdownMouseLeave(event) {
-    event.currentTarget
-      .querySelector('.dropdown-menu')
-      .classList.remove('show');
-  }
+  // function handleDropdownMouseLeave(event) {
+  //   event.currentTarget
+  //     .querySelector('.dropdown-menu')
+  //     .classList.remove('show');
+  // }
   function handleToggleNav() {
     if (
       document
@@ -39,10 +40,21 @@ function Navbar() {
       document.querySelector('.navbar .navbar-collapse').classList.add('show');
     }
   }
+  const router = useRouter();
+  const handleScroll = (id) => {
+    // console.log(router.pathname)
+    // if(router.pathname !== '/'){
+      router.push(`/#${id}`)
+    // const targetElement = document.getElementById(id);
+    // if (targetElement) {
+    //   targetElement.scrollIntoView({ behavior: "smooth" });
+    // }
+  };
+  
   return (
     <nav className="navbar navbar-expand-lg bord blur">
       <div className="container o-hidden">
-        <a className="logo icon-img-150" href="#">
+        <a className="logo icon-img-150" href="/">
           <img src="/assets/imgs/logo-light.svg" alt="logo" />
         </a>
 
@@ -66,93 +78,22 @@ function Navbar() {
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav">
+           
             <li
-              onMouseLeave={handleDropdownMouseLeave}
-              onMouseMove={handleDropdownMouseMove}
+              // onMouseLeave={handleDropdownMouseLeave}
+              // onMouseMove={handleDropdownMouseMove}
               className="nav-item dropdown"
             >
               <a
-                className="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span className="rolling-text">Demos</span>
-              </a>
-              <div className="dropdown-menu mega-menu">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-lg">
-                      <a className="item-img text-center" href="/home-main">
-                        <span className="img">
-                          <img src="/assets/imgs/menu/1.png" alt="" />
-                        </span>
-                        <span className="mt-15">Main Home</span>
-                      </a>
-                    </div>
-                    <div className="col-lg">
-                      <a
-                        className="item-img text-center"
-                        href="/home-modern-studio"
-                      >
-                        <span className="img">
-                          <img src="/assets/imgs/menu/2.png" alt="" />
-                        </span>
-                        <span className="mt-15">Modern Studio</span>
-                      </a>
-                    </div>
-                    <div className="col-lg">
-                      <a
-                        className="item-img text-center"
-                        href="/home-creative-agency"
-                      >
-                        <span className="img">
-                          <img src="/assets/imgs/menu/3.png" alt="" />
-                        </span>
-                        <span className="mt-15">Creative Agency</span>
-                      </a>
-                    </div>
-                    <div className="col-lg">
-                      <a
-                        className="item-img text-center"
-                        href="/home-digital-agency"
-                      >
-                        <span className="img">
-                          <img src="/assets/imgs/menu/4.png" alt="" />
-                        </span>
-                        <span className="mt-15">Digital Agency</span>
-                      </a>
-                    </div>
-                    <div className="col-lg">
-                      <a className="item-img text-center" href="/home-personal">
-                        <span className="img">
-                          <img src="/assets/imgs/menu/5.png" alt="" />
-                        </span>
-                        <span className="mt-15">Freelancer</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              onMouseLeave={handleDropdownMouseLeave}
-              onMouseMove={handleDropdownMouseMove}
-              className="nav-item dropdown"
-            >
-              <a
-                className="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span className="rolling-text">Services</span>
-              </a>
-              <ul className="dropdown-menu">
+              
+  className="nav-link"
+  role="button"
+  onClick={() => handleScroll("mainHomeServices")}
+>
+  <span className="rolling-text">Services</span>
+</a>
+
+              {/* <ul className="dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="/page-about">
                     About Us
@@ -193,24 +134,22 @@ function Navbar() {
                     Error 404
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </li>
             <li
-              onMouseLeave={handleDropdownMouseLeave}
-              onMouseMove={handleDropdownMouseMove}
+              // onMouseLeave={handleDropdownMouseLeave}
+              // onMouseMove={handleDropdownMouseMove}
               className="nav-item dropdown"
             >
-              <a
-                className="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
+                       <a
+              
+              className="nav-link"
+              role="button"
+              onClick={() => handleScroll("mainHomePortfolio")}
+            >
                 <span className="rolling-text">Portfolio</span>
               </a>
-              <div className="dropdown-menu">
+              {/* <div className="dropdown-menu">
                 <a className="dropdown-item" href="/portfolio-gallery">
                   Gallery
                 </a>
@@ -232,24 +171,22 @@ function Navbar() {
                 <a className="dropdown-item" href="/project-details">
                   Project Details
                 </a>
-              </div>
+              </div> */}
             </li>
             <li
-              onMouseLeave={handleDropdownMouseLeave}
-              onMouseMove={handleDropdownMouseMove}
+              // onMouseLeave={handleDropdownMouseLeave}
+              // onMouseMove={handleDropdownMouseMove}
               className="nav-item dropdown"
             >
-              <a
-                className="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span className="rolling-text">Blogs</span>
+                        <a
+              
+              className="nav-link"
+              role="button"
+              onClick={() => handleScroll("mainHomeTestimonials")}
+            >
+                <span className="rolling-text">Testimonials</span>
               </a>
-              <div className="dropdown-menu">
+              {/* <div className="dropdown-menu">
                 <a className="dropdown-item" href="/blog-classic">
                   Blog Standerd
                 </a>
@@ -262,13 +199,13 @@ function Navbar() {
                 <a className="dropdown-item" href="/blog-details">
                   Blog Details
                 </a>
-              </div>
+              </div> */}
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link" href="/page-contact">
                 <span className="rolling-text">Contact Us</span>
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
 

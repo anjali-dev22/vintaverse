@@ -18,7 +18,7 @@ import Script from 'next/script';
 import Marq from '@/components/home-main/Marq';
 
 export const metadata = {
-  title: 'webfolio',
+  title: 'Vintaverse',
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',
@@ -47,7 +47,7 @@ export default function Home() {
             <Marq />
             <Services />
             <Portfolio />
-            <Feat />
+            {/* <Feat /> */}
             <Team />
             <Testimonials />
             <Clients />

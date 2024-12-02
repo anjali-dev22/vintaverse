@@ -955,6 +955,9 @@ figure {
   transition: transform 0.3s ease, opacity 0.4s ease,
     -webkit-transform 0.3s ease;
   z-index: 99999;
+  height: 25px;
+  width: 25px;
+  background: #fd5b38;
 }
 
 .cursor-active {

@@ -1,14 +1,28 @@
+'use client'
 import React from 'react';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import msgIcon from '@/public/assets/imgs/message-icon.svg'
 
 function Footer() {
+  const router = useRouter();
+  const handleScroll = (id) => {
+      router.push(`/#${id}`)
+  };
+
   return (
     <footer className="clean-footer crev">
+    
       <div className="container pb-40 pt-40 ontop">
         <div className="row justify-content-between">
           <div className="col-lg-2">
-            <div className="logo icon-img-150 md-mb80">
+            <a href='/' className="logo icon-img-150 md-mb80">
               <img src="/assets/imgs/logo-light.svg" alt="website-logo" />
-            </div>
+              <span className='chat-icon'>
+
+              <Image src={msgIcon} alt="msg-icon"/>
+              </span>
+            </a>
           </div>
           <div className="col-lg-4">
             <div className="column md-mb50">
@@ -30,13 +44,12 @@ function Footer() {
               <h6 className="sub-title mb-30">Useful Links</h6>
               <ul className="rest fz-14 opacity-7">
                 <li className="mb-15">
-                  <a href="/page-about">About</a>
+                  <a  role="button"
+  onClick={() => handleScroll("mainHomeAboutUs")}>About</a>
                 </li>
                 <li className="mb-15">
-                  <a href="/page-services">Services</a>
-                </li>
-                <li className="mb-15">
-                  <a href="/blog-grid-sidebar">Blog</a>
+                  <a  role="button"
+  onClick={() => handleScroll("mainHomeServices")}>Services</a>
                 </li>
                 <li>
                   <a href="/page-contact">Contact</a>

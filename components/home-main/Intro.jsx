@@ -2,7 +2,7 @@ import React from 'react';
 
 function Intro() {
   return (
-    <section className="intro section-padding">
+    <section className="intro section-padding" id='mainHomeAboutUs'>
       <div className="container">
         <div className="row lg-marg">
           <div className="col-lg-8 md-mb80">

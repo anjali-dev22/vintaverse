@@ -30,7 +30,7 @@ function Services() {
     },
   };
   return (
-    <section className="services section-padding">
+    <section className="services section-padding" id='mainHomeServices'>
       <div className="container">
         <div className="sec-head mb-80">
           <div className="d-flex align-items-center">

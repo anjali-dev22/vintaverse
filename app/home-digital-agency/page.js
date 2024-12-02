@@ -18,7 +18,7 @@ import Testimonials from '@/components/home-digital-agency/Testimonials';
 import Blog from '@/components/home-digital-agency/Blog';
 
 export const metadata = {
-  title: 'webfolio',
+  title: 'vintaverse',
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',

@@ -26,7 +26,7 @@ function Portfolio() {
     },
   };
   return (
-    <section className="work-fade section-padding sub-bg bord-top-grd bord-bottom-grd">
+    <section className="work-fade section-padding sub-bg bord-top-grd bord-bottom-grd" id='mainHomePortfolio'>
       <div className="container position-re">
         <div className="sec-head mb-80">
           <div className="d-flex align-items-center">
