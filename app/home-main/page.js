@@ -16,7 +16,6 @@ import Team from '@/components/home-main/Team';
 import Testimonials from '@/components/home-main/Testimonials';
 import Script from 'next/script';
 import Marq from '@/components/home-main/Marq';
-import { useLocation } from "react-router-dom";
 export const metadata = {
   title: 'vintaverse',
   icons: {
@@ -32,15 +31,7 @@ export const metadata = {
 };
 
 export default function Home() {
-  const location = useLocation();
-  useEffect(() => {
-    if (location.state?.scrollTo) {
-      const element = document.getElementById(location.state.scrollTo);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [location]);
+
   return (
     <body>
       <LoadingScreen />
