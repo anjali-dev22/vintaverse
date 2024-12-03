@@ -2,7 +2,7 @@ import React from 'react';
 import data from '@/data/team';
 function Team() {
   return (
-    <section className="team section-padding pt-0" id='mainHomeTestimonials'>
+    <section className="team section-padding" id='mainHomeTestimonials'>
       <div className="container">
         <div className="sec-head mb-80">
           <div className="d-flex align-items-center">

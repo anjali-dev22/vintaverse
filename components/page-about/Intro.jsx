@@ -23,8 +23,8 @@ function Intro() {
           <div className="col-lg-6 valign">
             <div className="cont">
               <h3 className="mb-30">
-                Wfolio is a full-service{' '}
-                <span className="fw-200">creative studio</span> creating
+                Vintaverse is a full-service{' '}
+                <span className="fw-200">Vintaverse </span> creating
                 beautiful <span className="fw-200">digital experiences</span> &
                 products.
               </h3>

@@ -23,11 +23,7 @@ export const metadata = {
 export default function Home() {
   return (
     <body>
-      <LoadingScreen />
-      <Cursor />
-      <ProgressScroll />
-      <Lines />
-      <Navbar />
+   
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main className="main-bg o-hidden">
@@ -76,7 +72,6 @@ export default function Home() {
         src="/assets/js/imgReveal/imagesloaded.pkgd.min.js"
       ></Script>
 
-      {/* <Script src="/assets/js/smoother-script.js" strategy="lazyOnload" /> */}
 
       <Script src="/assets/js/scripts.js"></Script>
     </body>
